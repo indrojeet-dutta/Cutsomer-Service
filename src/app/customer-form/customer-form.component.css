@@ -1,0 +1,14 @@
+.btnStyle{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0%;
+  color: white;
+}
+
+input.ng-invalid.ng-touched{
+  border:1px solid red;
+}
+textarea.ng-invalid.ng-touched{
+  border:1px solid red;
+}

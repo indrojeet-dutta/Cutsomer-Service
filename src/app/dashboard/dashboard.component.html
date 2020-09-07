@@ -1,0 +1,31 @@
+<br>
+<div class="row">
+  <div class="col">
+    <h3 class="float-left">Dashboard</h3>
+    <button class="btn btn-secondary float-right" (click)="addCustomer()">
+      Add Customer
+    </button>
+  </div>
+</div>
+<br>
+<main class="grid">
+  <div *ngFor="let customer of customerList">
+    <div *ngIf="customerList.length > 0">
+      <div class="card border-info">
+        <div class="card-header bg-info border-success text-white">{{ customer.name }}</div>
+        <div class="card-body text-success" style="min-height: 9rem;">
+          <h5 class="card-title">Address</h5>
+          <p class="card-text text-dark">{{ customer.address }}</p>
+        </div>
+        <div class="card-footer bg-transparent border-info">
+          <a href="javascript:void(0);" (click)="onEditCustomer(customer.id)">Edit</a>
+          <a href="javascript:void(0);" class="float-right" (click)="onViewCustomer(customer.id)">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<div *ngIf="customerList.length === 0" class="text-primary">
+  <p>No data found.</p>
+</div>
+<br>
